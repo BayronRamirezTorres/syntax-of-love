@@ -1,0 +1,136 @@
+[gd_scene format=3 uid="uid://bhy71yobt4fex"]
+
+[ext_resource type="Script" uid="uid://bl1ck836oim03" path="res://scripts/menus/main_menu.gd" id="1_147xw"]
+[ext_resource type="Texture2D" uid="uid://yoc4wr83j0c6" path="res://assets/fondos/School_Hallway_Day.png" id="1_ldf1p"]
+[ext_resource type="Texture2D" uid="uid://wtrhq8np76o3" path="res://assets/alice/alice_neutral.png" id="2_tyyoy"]
+[ext_resource type="FontFile" uid="uid://d0ygfoxwwwwmy" path="res://fuentes/Smile Candy.ttf" id="3_p0il0"]
+[ext_resource type="StyleBox" uid="uid://63dar4pg4nfx" path="res://assets/diseñobotones/BotonNormal.tres" id="4_tyyoy"]
+[ext_resource type="StyleBox" uid="uid://bx7wfr80y0t5w" path="res://assets/diseñobotones/PresseedNormal.tres" id="5_cty7a"]
+[ext_resource type="StyleBox" uid="uid://c7gfjqmlg1xx5" path="res://assets/diseñobotones/HoverNormal.tres" id="5_p0il0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cty7a"]
+texture = ExtResource("1_ldf1p")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_147xw"]
+texture = ExtResource("2_tyyoy")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_41ciy"]
+bg_color = Color(0.23921569, 0.23921569, 0.23921569, 0.25882354)
+
+[node name="MainMenu" type="Control" unique_id=276551098]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_147xw")
+
+[node name="Panel" type="Panel" parent="." unique_id=1770877464]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_cty7a")
+
+[node name="Panel2" type="Panel" parent="." unique_id=257125349]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -563.0
+offset_right = 589.0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_147xw")
+
+[node name="Panel3" type="Panel" parent="." unique_id=1608207414]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -385.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_41ciy")
+
+[node name="Label" type="Label" parent="." unique_id=1337713235]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -425.0
+offset_bottom = 177.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.45844758, 0.2886109, 0.09779335, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_p0il0")
+theme_override_font_sizes/font_size = 63
+text = "Syntax of love
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1787951757]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -366.0
+offset_top = -115.0
+offset_right = -5.0
+offset_bottom = 122.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="IniciarPartida" type="Button" parent="VBoxContainer" unique_id=2004658400]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = ExtResource("4_tyyoy")
+theme_override_styles/pressed = ExtResource("5_cty7a")
+theme_override_styles/hover = ExtResource("5_p0il0")
+text = "Iniciar partida"
+
+[node name="CargarPartida" type="Button" parent="VBoxContainer" unique_id=2038611050]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = ExtResource("4_tyyoy")
+theme_override_styles/pressed = ExtResource("5_cty7a")
+theme_override_styles/hover = ExtResource("5_p0il0")
+text = "Cargar partida"
+
+[node name="Glosario" type="Button" parent="VBoxContainer" unique_id=1466435066]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = ExtResource("4_tyyoy")
+theme_override_styles/pressed = ExtResource("5_cty7a")
+theme_override_styles/hover = ExtResource("5_p0il0")
+text = "Glosario"
+
+[node name="Opciones" type="Button" parent="VBoxContainer" unique_id=1884624250]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = ExtResource("4_tyyoy")
+theme_override_styles/pressed = ExtResource("5_cty7a")
+theme_override_styles/hover = ExtResource("5_p0il0")
+text = "Opciones"
+
+[node name="Salir" type="Button" parent="VBoxContainer" unique_id=1633801579]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = ExtResource("4_tyyoy")
+theme_override_styles/pressed = ExtResource("5_cty7a")
+theme_override_styles/hover = ExtResource("5_p0il0")
+text = "Salir"
+
+[connection signal="pressed" from="VBoxContainer/IniciarPartida" to="." method="_on_iniciar_partida_pressed"]
+[connection signal="pressed" from="VBoxContainer/CargarPartida" to="." method="_on_cargar_partida_pressed"]
+[connection signal="pressed" from="VBoxContainer/Glosario" to="." method="_on_glosario_pressed"]
+[connection signal="pressed" from="VBoxContainer/Opciones" to="." method="_on_opciones_pressed"]
+[connection signal="pressed" from="VBoxContainer/Salir" to="." method="_on_salir_pressed"]
