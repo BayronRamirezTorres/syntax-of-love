@@ -1,0 +1,19 @@
+[background arg="res://assets/fondos/Old_School.png" fade="0.0"]
+jugador: El sol comenzaba a bajar lentamente.
+jugador: Era una tarde como cualquier otra en la universidad.
+jugador: Bueno... al menos eso pensaba en ese momento.
+jugador: Antes de seguir...
+jugador: Supongo que debería presentarme.
+[clear time="1.0"]
+[text_input text="¿Cómo te llamas?" var="nameplayer"]
+jugador: Mi nombre es {nameplayer}\
+soy estudiante de Ingeniería de Sistemas.\
+Apenas voy en segundo semestre.
+jugador: Si soy completamente honesto...\
+No entiendo casi nada de programación.
+jugador: Hace unos días escuché que existe un club de programación y decidi llenar el formulario y inscribirme.\
+Dicen que estudiantes de semestres más avanzados ayudan a quienes apenas estamos comenzando.
+jugador: No sé si realmente pueda aprender algo allí...\
+Pero tampoco pierdo nada con intentarlo.\
+Comenzare a caminar hacia el edificio donde se reune el club.
+jump Camino_Al_Club/
